@@ -87,7 +87,7 @@ body {
 }
 
 .brand-item {
-    width: calc(100% / 6 - 20px); /* 6 sütun */
+    width: calc(100% / 5 - 20px); /* 6 sütun */
     background: white;
     padding: 20px;
     box-sizing: border-box;
