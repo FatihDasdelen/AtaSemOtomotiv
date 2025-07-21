@@ -107,6 +107,7 @@ body {
         height: 80px;
         object-fit: contain;
         margin-bottom: 10px;
+        display:block;
     }
 
 .brand-name {
