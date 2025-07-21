@@ -234,4 +234,42 @@ body {
     .brand-name {
         font-size: 10px;
     }
+
+   
+
 }
+.about-section {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.about-box {
+    width: 45%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .about-box h3 {
+        margin-top: 0;
+        font-size: 20px;
+        color: #1a1a2e;
+    }
+
+    .about-box p {
+        font-size: 16px;
+        color: #333;
+        line-height: 1.5;
+    }
+
+    .about-box.left {
+        align-self: flex-start;
+    }
+
+    .about-box.right {
+        align-self: flex-end;
+    }
