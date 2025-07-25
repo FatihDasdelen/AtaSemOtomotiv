@@ -273,3 +273,34 @@ body {
     .about-box.right {
         align-self: flex-end;
     }
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.blink-effect {
+    animation: blink 0.5s ease-in-out 4; /* 4 kez yanıp söner */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

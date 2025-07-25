@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ATA-SEM Otomotiv</title>
     <link rel="stylesheet" href="css/style.css" />
+
 </head>
 <body>
 
     <!-- Üst Menü -->
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo"><img src="images/araba.jpg" alt="ATA_SEM" class="header-logo"/>ATA-SEM</a>  
+            <a href="#" class="logo"><img src="images/araba.jpg" alt="ATA_SEM" class="header-logo" />ATA-SEM</a>
             <ul class="nav-links">
                 <li><a href="#">Ana Sayfa</a></li>
                 <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                <li><a href="#">İletişim</a></li>
+                <li><a href="#" id="iletisim-link">İletişim</a></li>
             </ul>
         </div>
     </nav>
@@ -93,7 +94,7 @@
             ATA-SEM Otomotiv olarak kurulduğumuz ilk günden itibaren güler yüzlü hizmet stratejisi izliyoruz. Her bir müşterimize aynı hassasiyet ve önem ile yaklaşıyoruz ve müşterilerimizin memnuniyetini birinci öncelik benimseyerek hızlı yedek parça tedariği sunuyoruz.
         </p>
     </section>
-    <div class="whatsapp-full-button">
+    <div class="whatsapp-full-button" id="contact-section">
         <a href="https://wa.me/905067029105" target="_blank">
             <img src="images/whatsapp.png" alt="WhatsApp" />
             <span>Bize WhatsApp Üzerinden Ulaşın</span>
@@ -116,6 +117,25 @@
             <p>İletişim: <a href="mailto:info@atasemotomotiv.com">info@atasemotomotiv.com</a></p>
         </div>
     </footer>
+    <script>
+        document.getElementById('iletisim-link').addEventListener('click', function (e) {
+            e.preventDefault();
+            const contactSection = document.getElementById('contact-section');
+            contactSection.scrollIntoView({ behavior: 'smooth' });
 
+            const whatsappButton = contactSection.querySelector('a[href*="wa.me"]');
+            const facebookButton = contactSection.querySelector('a[href*="facebook.com"]');
+
+            whatsappButton.classList.add('blink-effect');
+            facebookButton.classList.add('blink-effect');
+
+            setTimeout(() => {
+                whatsappButton.classList.remove('blink-effect');
+                facebookButton.classList.remove('blink-effect');
+            }, 2500);
+        });
+
+        
+    </script>
 </body>
 </html>
