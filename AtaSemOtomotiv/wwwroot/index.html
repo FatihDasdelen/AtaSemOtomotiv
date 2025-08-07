@@ -8,6 +8,15 @@
 
 </head>
 <body>
+<div class="screen-cover">
+    <div class="split top-split"></div>
+    <div class="split bottom-split"></div>
+    <div class="logo-container">
+        <img src="images/Ata-Sem.jpeg" alt="ATA-SEM Logo">
+    </div>
+</div>
+
+
 
     <!-- Üst Menü -->
     <nav class="navbar">
@@ -23,7 +32,9 @@
 
     <!-- Enlemesine Logo -->
     <section class="brand-logos">
-        <center><h2>Tedarik Sağladığımız Markalar</h2></center>
+        <center>
+            <h2>Tedarik Sağladığımız Markalar</h2>
+        </center>
         <div class="brand-container">
             <div class="brand-item">
                 <img src="images/audi.png" alt="Audi" />
@@ -37,7 +48,8 @@
             <div class="brand-item">
                 <img src="images/dacia.png" alt="Dacia" />
                 <span class="brand-name">DACIA</span>
-            </div><div class="brand-item">
+            </div>
+            <div class="brand-item">
                 <img src="images/daihatsu.png" alt="Daihatsu" />
                 <span class="brand-name">DAIHATSU</span>
             </div>
@@ -135,7 +147,18 @@
             }, 2500);
         });
 
-        
+        window.addEventListener("load", () => {
+            setTimeout(() => {
+                document.querySelector(".screen-cover").classList.add("hide");
+
+                // 1.5 saniye sonra açılış animasyonunu tamamen gizle
+                setTimeout(() => {
+                    document.querySelector(".screen-cover").style.display = "none";
+                }, 1500);
+            }, 1000); // Logo 1 saniye görünsün
+        });
+
+
     </script>
 </body>
 </html>

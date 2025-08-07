@@ -303,4 +303,59 @@ body {
 
 
 
+.screen-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    z-index: 9999;
+    overflow: hidden;
+}
 
+/* Üst ve alt kapaklar */
+.split {
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    background-color: black;
+    transition: transform 1.5s ease-in-out;
+    z-index: 1;
+}
+
+.top-split {
+    top: 0;
+}
+
+.bottom-split {
+    top: 50vh;
+}
+
+/* Logoyu ortada göster */
+.logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    transition: opacity 1s ease-in-out;
+}
+
+    .logo-container img {
+        width: 500px;
+        max-width: 100vw;
+    }
+
+/* Açılma animasyonu */
+.screen-cover.hide .top-split {
+    transform: translateY(-100%);
+}
+
+.screen-cover.hide .bottom-split {
+    transform: translateY(100%);
+}
+
+.screen-cover.hide .logo-container {
+    opacity: 0;
+}
